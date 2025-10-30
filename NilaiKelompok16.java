@@ -4,12 +4,15 @@ public class NilaiKelompok16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int nilai;
-        float totalNilai;
+        int totalNilai;
         float rataRata;
+
+        float maxRataRata = 0;
+        int kelompokTerbaik = 0;
 
         int i = 1;
         while (i <= 6) {
-            System.out.println("kelompok " + i);
+            System.out.println("Kelompok " + i);
 
             totalNilai = 0;
             for (int j = 1; j <= 5; j++) {
@@ -17,10 +20,21 @@ public class NilaiKelompok16 {
                 nilai = sc.nextInt();
                 totalNilai += nilai;
             }
-            rataRata = totalNilai / 5;
-            System.out.println("\nrata-rata nilai kelompok " + i + " : " + rataRata);
+
+            rataRata = (float) totalNilai / 5;
+            System.out.println("rata-rata nilai kelompok " + i + " : " + rataRata);
+
+            if (rataRata > maxRataRata) {
+                maxRataRata = rataRata;
+                kelompokTerbaik = i;
+            }
+
             i++;
         }
+
+        System.out.println("Kelompok dengan rata-rata nilai tertinggi adalah: Kelompok " + kelompokTerbaik);
+        System.out.println("Dengan nilai rata-rata: " + maxRataRata);
+
         sc.close();
     }
 }

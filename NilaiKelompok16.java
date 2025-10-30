@@ -6,6 +6,7 @@ public class NilaiKelompok16 {
         int nilai;
         float totalNilai;
         float rataRata;
+        String masukan;
 
         int i = 1;
         while (i <= 6) {
@@ -18,9 +19,12 @@ public class NilaiKelompok16 {
                 totalNilai += nilai;
             }
             rataRata = totalNilai / 5;
-            System.out.println("rata-rata nilai kelompok " + i + " : " + rataRata);
+            System.out.print("masukan dan luaran untuk kelompok " + i + ": ");
+            masukan = sc.next();
+            System.out.println("\nrata-rata nilai kelompok " + i + " : " + rataRata);
+            System.out.println("masukan dan luaran : " + masukan + "\n");
             i++;
         }
-
+        sc.close();
     }
 }

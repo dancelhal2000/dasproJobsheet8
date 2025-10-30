@@ -1,7 +1,13 @@
+import java.util.Scanner;
+
 public class tugas116 {
 
     public static void main(String[] args) {
-        for (int n = 1; n <= 5; n++) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("masukkan nilai i = ");
+        int i = sc.nextInt();
+        
+        for (int n = 1; n <= i; n++) {
             
             int jumlahKuadrat = 0; 
             String prosesPerhitungan = "";
